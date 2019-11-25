@@ -1,0 +1,26 @@
+server:
+  port: 8888
+  tomcat:
+    uri-encoding: utf-8
+
+spring:
+  application:
+    name: jpush-service
+
+  #国际化配置
+  messages:
+    encoding: UTF-8
+    #basename: i18n/messages
+
+logging:
+  file: logs/hr-service.log
+  level:
+    root: INFO
+    org.hibernate: INFO
+    org.hibernate.type.descriptor.sql.BasicBinder: TRACE
+    org.hibernate.type.descriptor.sql.BasicExtractor: TRACE
+    com.jvtd.bop2: DEBUG
+    logging:
+  pattern:
+    console: "%d{yyyy-MM-dd HH:mm:ss.SSS} %contextName [%thread] %-5level %logger{36} - %msg%n"
+    file: "%d{yyyy-MM-dd HH:mm:ss.SSS} %contextName [%thread] %-5level %logger{36} - %msg%n"
